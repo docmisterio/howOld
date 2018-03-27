@@ -1,32 +1,8 @@
 import UIKit
 
-class ViewController: UIViewController {
+class TimeDifference {
     
-    @IBOutlet weak var birthDate: UIDatePicker!
-    
-    @IBOutlet weak var ageInYears: UILabel!
-    @IBOutlet weak var ageInDays: UILabel!
-    @IBOutlet weak var ageInMonths: UILabel!
-    @IBOutlet weak var ageInWeeks: UILabel!
-    @IBOutlet weak var ageInHours: UILabel!
-    @IBOutlet weak var ageInMinutes: UILabel!
-    @IBOutlet weak var ageInSeconds: UILabel!
-    
-    @IBAction func birthDateValueChanged(_ sender: Any) {
-    }
-    
-    @IBAction func dateChosen(_ sender: Any) {
-        setTimes()
-        timer?.invalidate()
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(setTimes), userInfo: nil, repeats: true)
-    }
-    
-    private var timer: Timer?
-    
-    
-    // --------- Everything Else
-    
-    private var chosenBirthdate: Date {
+    var chosenBirthdate: Date {
         return birthDate.date
     }
     
@@ -34,7 +10,7 @@ class ViewController: UIViewController {
         let timeComponents = Calendar.current.dateComponents([.year], from: chosenBirthdate, to: Date())
         guard let years = timeComponents.year else {
             fatalError("components doesn't have a year")
-                }
+        }
         return String(years.withCommas())
     }
     
@@ -86,16 +62,5 @@ class ViewController: UIViewController {
             fatalError("components doesn't have a second")
         }
         return String(seconds.withCommas())
-    }
-    
-    @objc private func setTimes() {
-        
-        ageInYears.text = timeDifferenceForYear()
-        ageInMonths.text = timeDifferenceForMonth()
-        ageInWeeks.text = timeDifferenceForWeek()
-        ageInDays.text = timeDifferenceForDay()
-        ageInHours.text = timeDifferenceForHour()
-        ageInMinutes.text = timeDifferenceForMinute()
-        ageInSeconds.text = timeDifferenceForSecond()
     }
 }

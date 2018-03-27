@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  howOldInSeconds
-//
-//  Created by mark.sands on 3/19/18.
-//  Copyright © 2018 mark.sands. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
@@ -13,7 +5,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
