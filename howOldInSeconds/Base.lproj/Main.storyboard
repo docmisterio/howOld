@@ -81,6 +81,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Age in Minutes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TQb-jF-piy">
+                                <rect key="frame" x="17" y="523" width="342" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Age in Seconds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fhq-wD-K2m">
+                                <rect key="frame" x="16" y="552" width="342" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -88,7 +102,9 @@
                     <connections>
                         <outlet property="ageInDays" destination="ZxX-1N-sT5" id="BkV-OZ-QuD"/>
                         <outlet property="ageInHours" destination="BQR-n5-kJ3" id="BBU-MM-WaB"/>
+                        <outlet property="ageInMinutes" destination="TQb-jF-piy" id="HKd-j3-q8J"/>
                         <outlet property="ageInMonths" destination="jvc-yz-lGj" id="egd-m7-Qpy"/>
+                        <outlet property="ageInSeconds" destination="fhq-wD-K2m" id="UtG-kJ-Lze"/>
                         <outlet property="ageInWeeks" destination="T7s-16-EA4" id="cbI-Ky-aCF"/>
                         <outlet property="ageInYears" destination="Xcm-j1-cJH" id="8Bb-QX-TpM"/>
                         <outlet property="birthDate" destination="oPX-lB-CEE" id="a56-5t-mvf"/>
